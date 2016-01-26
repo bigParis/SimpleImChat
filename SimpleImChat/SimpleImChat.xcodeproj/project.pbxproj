@@ -523,9 +523,9 @@
 		1B62E9B51C573FF8007539BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = SimpleImChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yy.test.SimpleImChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -535,9 +535,9 @@
 		1B62E9B61C573FF8007539BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = SimpleImChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yy.test.SimpleImChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
