@@ -12,12 +12,10 @@
 		1B62E9951C573FF8007539BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B62E9931C573FF8007539BD /* Main.storyboard */; };
 		1B62E9971C573FF8007539BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B62E9961C573FF8007539BD /* Assets.xcassets */; };
 		1B62E99A1C573FF8007539BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B62E9981C573FF8007539BD /* LaunchScreen.storyboard */; };
-		1B62E9A51C573FF8007539BD /* SimpleImChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B62E9A41C573FF8007539BD /* SimpleImChatTests.m */; };
-		1B62E9B01C573FF8007539BD /* SimpleImChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B62E9AF1C573FF8007539BD /* SimpleImChatUITests.m */; };
-		1B62E9BF1C5740E2007539BD /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B62E9BE1C5740E2007539BD /* ChatViewController.m */; };
 		1B62E9C21C574B57007539BD /* ChatViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B62E9C11C574B57007539BD /* ChatViewCell.m */; };
 		1B62E9C41C5753CC007539BD /* messages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B62E9C31C5753CC007539BD /* messages.plist */; };
 		1B62E9C71C57564A007539BD /* ChatMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B62E9C61C57564A007539BD /* ChatMessageModel.m */; };
+		1B76965C1C577DF300C12CBF /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B76965B1C577DF300C12CBF /* ChatViewController.m */; };
 		1BEF17051C576CA6000156D5 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF16EF1C576CA6000156D5 /* MASCompositeConstraint.m */; };
 		1BEF17061C576CA6000156D5 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF16F21C576CA6000156D5 /* MASConstraint.m */; };
 		1BEF17071C576CA6000156D5 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF16F41C576CA6000156D5 /* MASConstraintMaker.m */; };
@@ -56,18 +54,14 @@
 		1B62E9991C573FF8007539BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B62E99B1C573FF8007539BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B62E9A01C573FF8007539BD /* SimpleImChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleImChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B62E9A41C573FF8007539BD /* SimpleImChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleImChatTests.m; sourceTree = "<group>"; };
-		1B62E9A61C573FF8007539BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B62E9AB1C573FF8007539BD /* SimpleImChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleImChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B62E9AF1C573FF8007539BD /* SimpleImChatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleImChatUITests.m; sourceTree = "<group>"; };
-		1B62E9B11C573FF8007539BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B62E9BD1C5740E2007539BD /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatViewController.h; path = ../ChatViewController.h; sourceTree = "<group>"; };
-		1B62E9BE1C5740E2007539BD /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChatViewController.m; path = ../ChatViewController.m; sourceTree = "<group>"; };
 		1B62E9C01C574B57007539BD /* ChatViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewCell.h; sourceTree = "<group>"; };
 		1B62E9C11C574B57007539BD /* ChatViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewCell.m; sourceTree = "<group>"; };
 		1B62E9C31C5753CC007539BD /* messages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = messages.plist; sourceTree = "<group>"; };
 		1B62E9C51C57564A007539BD /* ChatMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMessageModel.h; sourceTree = "<group>"; };
 		1B62E9C61C57564A007539BD /* ChatMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMessageModel.m; sourceTree = "<group>"; };
+		1B76965A1C577DF300C12CBF /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		1B76965B1C577DF300C12CBF /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		1BEF16EE1C576CA6000156D5 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		1BEF16EF1C576CA6000156D5 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		1BEF16F01C576CA6000156D5 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -122,8 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				1B62E9891C573FF8007539BD /* SimpleImChat */,
-				1B62E9A31C573FF8007539BD /* SimpleImChatTests */,
-				1B62E9AE1C573FF8007539BD /* SimpleImChatUITests */,
 				1B62E9881C573FF8007539BD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -165,24 +157,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1B62E9A31C573FF8007539BD /* SimpleImChatTests */ = {
-			isa = PBXGroup;
-			children = (
-				1B62E9A41C573FF8007539BD /* SimpleImChatTests.m */,
-				1B62E9A61C573FF8007539BD /* Info.plist */,
-			);
-			path = SimpleImChatTests;
-			sourceTree = "<group>";
-		};
-		1B62E9AE1C573FF8007539BD /* SimpleImChatUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1B62E9AF1C573FF8007539BD /* SimpleImChatUITests.m */,
-				1B62E9B11C573FF8007539BD /* Info.plist */,
-			);
-			path = SimpleImChatUITests;
-			sourceTree = "<group>";
-		};
 		1BEF16C41C5763EA000156D5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,8 +178,8 @@
 		1BEF16C61C576410000156D5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1B62E9BD1C5740E2007539BD /* ChatViewController.h */,
-				1B62E9BE1C5740E2007539BD /* ChatViewController.m */,
+				1B76965A1C577DF300C12CBF /* ChatViewController.h */,
+				1B76965B1C577DF300C12CBF /* ChatViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -384,8 +358,8 @@
 				1BEF17071C576CA6000156D5 /* MASConstraintMaker.m in Sources */,
 				1BEF170B1C576CA6000156D5 /* NSArray+MASAdditions.m in Sources */,
 				1BEF17061C576CA6000156D5 /* MASConstraint.m in Sources */,
+				1B76965C1C577DF300C12CBF /* ChatViewController.m in Sources */,
 				1BEF17081C576CA6000156D5 /* MASLayoutConstraint.m in Sources */,
-				1B62E9BF1C5740E2007539BD /* ChatViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +367,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B62E9A51C573FF8007539BD /* SimpleImChatTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,7 +374,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B62E9B01C573FF8007539BD /* SimpleImChatUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
