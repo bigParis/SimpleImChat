@@ -21,7 +21,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.msgTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    NSLog(@"viewDidLoad");
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    NSLog(@"viewWillAppear");
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:YES];
+    NSLog(@"viewDidAppear");
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    NSLog(@"viewDidLayoutSubviews");
 }
 
 - (NSArray<ChatMessageModel *> *)messages {
@@ -40,8 +56,8 @@
 
 #pragma mark - <UITableViewDataSource>
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.messages.count;
-//    return 2;
+//    return self.messages.count;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
