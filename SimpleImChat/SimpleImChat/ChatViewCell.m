@@ -11,9 +11,12 @@
 #import "Masonry.h"
 
 @interface ChatViewCell ()
+
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UIButton *contentBtn;
 @property (weak, nonatomic) IBOutlet UIImageView *portraitImg;
+@property (weak, nonatomic) IBOutlet UIImageView *oherPortraitImg;
+@property (weak, nonatomic) IBOutlet UIButton *otherContentBtn;
 
 @end
 
@@ -22,36 +25,47 @@
 - (void)setMessageModel:(ChatMessageModel *)messageModel {
     _messageModel = messageModel;
     self.timeLabel.text = messageModel.time;
-    [self.contentBtn setTitle:messageModel.text forState:UIControlStateNormal];
+    if (_messageModel.type == MessageTypeMe) {
+        [self setShowContent:self.contentBtn showPortrait:self.portraitImg hideContent:self.otherContentBtn hidePortrait:self.oherPortraitImg];
+    } else {
+        [self setShowContent:self.otherContentBtn showPortrait:self.oherPortraitImg hideContent:self.contentBtn hidePortrait:self.portraitImg];
+    }
+    
+}
 
+- (void)setShowContent:(UIButton *)showContent showPortrait:(UIImageView *)showPortrait hideContent:(UIButton *)hideContent hidePortrait:(UIImageView *)hidePortrait {
+    showContent.hidden = NO;
+    showPortrait.hidden = NO;
+    hideContent.hidden = YES;
+    hidePortrait.hidden = YES;
+    
+    [showContent setTitle:_messageModel.text forState:UIControlStateNormal];
+    
     [self layoutIfNeeded];
     
     // 通过frame设置是不可以的,AutoLayout会根据约束改变frame
-//    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.contentBtn.titleLabel.frame.size.height);
+    //    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.contentBtn.titleLabel.frame.size.height);
     
-    CGFloat labelHeight = self.contentBtn.titleLabel.frame.size.height;
-//     用Masonary可能会有权限问题
-    [self.contentBtn mas_updateConstraints:^(MASConstraintMaker *make) {
+    CGFloat labelHeight = showContent.titleLabel.frame.size.height;
+    //     用Masonary可能会有权限问题
+    [showContent mas_updateConstraints:^(MASConstraintMaker *make) {
         make.height.equalTo(@(labelHeight));
     }];
     // 下面使用系统的约束添加
-//    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.contentBtn
-//                                                     attribute:NSLayoutAttributeHeight
-//                                                     relatedBy:NSLayoutRelationEqual
-//                                                        toItem:nil
-//                                                     attribute:NSLayoutAttributeHeight
-//                                                    multiplier:1
-//                                                      constant:labelHeight]];
-    [self.contentBtn layoutIfNeeded];
+    //    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.contentBtn
+    //                                                     attribute:NSLayoutAttributeHeight
+    //                                                     relatedBy:NSLayoutRelationEqual
+    //                                                        toItem:nil
+    //                                                     attribute:NSLayoutAttributeHeight
+    //                                                    multiplier:1
+    //                                                      constant:labelHeight]];
+    [showContent layoutIfNeeded];
     CGFloat spacing = 10.0f;
-    messageModel.cellHeight = MAX(CGRectGetMaxY(self.portraitImg.frame), CGRectGetMaxY(self.contentBtn.frame)) + spacing;
-    
-//    [self layoutIfNeeded];
+    _messageModel.cellHeight = MAX(CGRectGetMaxY(showPortrait.frame), CGRectGetMaxY(showContent.frame)) + spacing;
 }
 - (void)awakeFromNib {
     self.contentBtn.titleLabel.numberOfLines = 0;
-    UIImage * image = [[UIImage imageNamed:@"文字气泡2.png"] stretchableImageWithLeftCapWidth:25 topCapHeight:15];
-    [self.contentBtn setBackgroundImage:image forState:UIControlStateNormal];
+    self.otherContentBtn.titleLabel.numberOfLines = 0;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

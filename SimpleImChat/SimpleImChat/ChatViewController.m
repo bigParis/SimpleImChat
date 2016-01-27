@@ -14,15 +14,16 @@
 
 @property (strong, nonatomic) NSArray<ChatMessageModel *> *messages;
 @property (weak, nonatomic) IBOutlet UITableView *msgTableView;
+- (IBAction)reloadButtonPressed:(id)sender;
 @end
 
 @implementation ChatViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.msgTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//    self.msgTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     NSLog(@"viewDidLoad");
-    // Do any additional setup after loading the view.
+//    self.msgTableView.estimatedRowHeight = 100.0f;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -33,6 +34,11 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:YES];
     NSLog(@"viewDidAppear");
+}
+
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    NSLog(@"viewWillLayoutSubviews");
 }
 
 - (void)viewDidLayoutSubviews {
@@ -56,13 +62,15 @@
 
 #pragma mark - <UITableViewDataSource>
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return self.messages.count;
-    return 1;
+    return self.messages.count;
+//    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"cellForRowAtIndexPath:%ld", indexPath.row);
+    NSLog(@"%s:%ld", __func__, indexPath.row);
     ChatViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"ChatViewCellIdentifier"];
+//    NSLog(@"%s::%@", __func__, cell);
+//    NSLog(@"cellForRowAtIndexPath, model:%f", cell.messageModel.cellHeight);
     cell.messageModel = self.messages[indexPath.row];
     return cell;
     
@@ -70,12 +78,21 @@
 
 #pragma mark - <UITableViewDelegate>
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"estimatedHeightForRowAtIndexPath:%ld", indexPath.row);
+    NSLog(@"%s:%ld",__func__, indexPath.row);
     return 200.0f;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"heightForRowAtIndexPath:%ld", (long)indexPath.row);
+    NSLog(@"%s:%ld", __func__, indexPath.row);
     ChatMessageModel *model = self.messages[indexPath.row];
+//    ChatViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"ChatViewCellIdentifier" forIndexPath:indexPath];
+//    NSLog(@"%s:%@", __func__, cell);
+//    NSLog(@"heightForRowAtIndexPath, model:%f", cell.messageModel.cellHeight);
     return model.cellHeight;
+}
+
+- (IBAction)reloadButtonPressed:(id)sender {
+    NSLog(@"reloadButtonPressed");
+    [self.msgTableView reloadData];
+//    [self.msgTableView setContentOffset:CGPointMake(0,0) animated:NO];
 }
 @end

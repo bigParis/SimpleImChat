@@ -497,7 +497,7 @@
 			buildSettings = {
 				GCC_VERSION = "";
 				INFOPLIST_FILE = SimpleImChat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yy.test.SimpleImChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -509,7 +509,7 @@
 			buildSettings = {
 				GCC_VERSION = "";
 				INFOPLIST_FILE = SimpleImChat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yy.test.SimpleImChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
